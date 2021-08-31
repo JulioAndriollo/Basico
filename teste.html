@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Redux</title>
+
+        <script src="./redux.min.js"></script>
+        <script>
+            const state = 'Joao'
+            function reducer(nome = state,action) {
+                if (action.type==='joao') return  {nome: 'Joao'}
+                return { nome: 'Julio' }
+            }
+
+            
+    
+            const store = Redux.createStore(reducer)
+            console.log(store)
+
+            console.log(store.getState().nome)
+
+            store.dispatch({type: 'joao'})
+            console.log(store.getState().nome)
+
+
+        </script>
+    </head>
+
+    <body>
+        <h1>a</h1>
+    </body>
+
+    
+
+</html>
